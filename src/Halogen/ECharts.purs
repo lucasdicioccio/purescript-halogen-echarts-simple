@@ -1,5 +1,5 @@
 
-module Halogen.EChart where
+module Halogen.ECharts where
 
 import Prelude (bind, discard, pure, unit, ($), (>>=))
 import Data.Traversable (traverse_)
