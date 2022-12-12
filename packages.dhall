@@ -99,20 +99,7 @@ in  upstream
 -------------------------------
 -}
 let upstream =
-      https://github.com/purescript/package-sets/releases/download/psc-0.15.2-20220706/packages.dhall
-        sha256:7a24ebdbacb2bfa27b2fc6ce3da96f048093d64e54369965a2a7b5d9892b6031
+      https://github.com/purescript/package-sets/releases/download/psc-0.15.4-20221212/packages.dhall
+        sha256:62ea94a2728dc4f0a47491c064776f402a8a1b3cf2d8a7ec83c96075d30bd590
 
 in  upstream
-  with echarts-simple =
-      { dependencies =
-          [ "console"
-          , "effect"
-          , "functions"
-          , "prelude"
-          , "web-dom"
-          ]
-      , repo =
-          "https://github.com/lucasdicioccio/purescript-echarts-simple.git"
-      , version =
-          "v0.0.1"
-      }
