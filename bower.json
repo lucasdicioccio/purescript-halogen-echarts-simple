@@ -14,7 +14,7 @@
         "output"
     ],
     "dependencies": {
-        "purescript-aff": "^v7.0.0",
+        "purescript-aff": "^v7.1.0",
         "purescript-console": "^v6.0.0",
         "purescript-echarts-simple": "https://github.com/lucasdicioccio/purescript-echarts-simple.git#v0.0.1",
         "purescript-effect": "^v4.0.0",
@@ -22,6 +22,6 @@
         "purescript-halogen": "^v7.0.0",
         "purescript-halogen-subscriptions": "https://github.com/purescript-halogen/purescript-halogen-subscriptions.git#v2.0.0",
         "purescript-maybe": "^v6.0.0",
-        "purescript-prelude": "^v6.0.0"
+        "purescript-prelude": "^v6.0.1"
     }
 }
