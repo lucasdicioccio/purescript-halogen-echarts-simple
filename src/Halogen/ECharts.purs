@@ -37,10 +37,19 @@ data Query o a =
     SetOptions (Options o) a
   | ReRender a
 
+type StyleString = String
+
+style480x400 :: StyleString
+style480x400 = "width:480px;height:400px;"
+
+style640x480 :: StyleString
+style640x480 = "width:640px;height:480px;"
+
 component
   :: forall option item m. MonadAff m
-  => H.Component (Query option) (Input option) (Output item) m
-component = 
+  => StyleString
+  -> H.Component (Query option) (Input option) (Output item) m
+component style =
   H.mkComponent
     { initialState
     , render
@@ -60,7 +69,7 @@ component =
       ]
       [ HH.div
         [ HP.class_ $ HH.ClassName "echarts-ref"
-        , HP.style "width:480px;height:400px;"
+        , HP.style style
         , HP.ref (H.RefLabel "chart-ref")
         ]
         [
@@ -75,7 +84,7 @@ component =
       ReRender a -> do
         handleAction $ Render
         pure (Just a)
-  
+ 
     handleAction = case _ of
       Initialize -> do
         H.getRef (H.RefLabel "chart-ref") >>= traverse_ \element -> do
